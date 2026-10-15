@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Sổ ôn QLKT",
+      "hasCanvas": false,
+      "bodyTextLen": 1493,
+      "bodyTextHash": "7df839e1a37c47e3d68752750f58d0fa2490aedd5343907a323e99918f7c1326",
+      "bodyTextPrefix": "SỔ ÔN QLNN về kinh tế Mục lục Thẻ Vấn đáp KẾT THÚC HỌC PHẦN Giản",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Sổ ôn QLKT",
+      "hasCanvas": false,
+      "bodyTextLen": 1493,
+      "bodyTextHash": "7df839e1a37c47e3d68752750f58d0fa2490aedd5343907a323e99918f7c1326",
+      "bodyTextPrefix": "SỔ ÔN QLNN về kinh tế Mục lục Thẻ Vấn đáp KẾT THÚC HỌC PHẦN Giản",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

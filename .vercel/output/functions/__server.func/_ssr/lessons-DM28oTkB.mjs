@@ -1,0 +1,889 @@
+import { S as require_jsx_runtime, b as Link, p as useRouterState } from "../_libs/@tanstack/react-router+[...].mjs";
+import { c as BookOpen, i as Layers, r as MessagesSquare } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/lessons-DM28oTkB.js
+var import_jsx_runtime = require_jsx_runtime();
+var NAV = [
+	{
+		to: "/",
+		label: "Mục lục",
+		icon: BookOpen,
+		exact: true
+	},
+	{
+		to: "/the",
+		label: "Thẻ",
+		icon: Layers,
+		exact: false
+	},
+	{
+		to: "/thi",
+		label: "Vấn đáp",
+		icon: MessagesSquare,
+		exact: false
+	}
+];
+function AppShell({ children }) {
+	const pathname = useRouterState({ select: (state) => state.location.pathname });
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "min-h-screen bg-paper text-ink",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
+			className: "sticky top-0 z-20 border-b border-line bg-paper/95 backdrop-blur-sm",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mx-auto flex w-full max-w-2xl items-center justify-between gap-3 px-4 py-3",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+					to: "/",
+					className: "min-w-0",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "block text-xs font-semibold tracking-wide text-seal uppercase",
+						children: "Sổ ôn"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "font-display block truncate text-lg leading-tight font-semibold",
+						children: "QLNN về kinh tế"
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
+					className: "flex shrink-0 gap-1",
+					"aria-label": "Chế độ ôn",
+					children: NAV.map((item) => {
+						const active = item.exact ? pathname === item.to : pathname.startsWith(item.to);
+						const Icon = item.icon;
+						return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+							to: item.to,
+							className: "flex min-h-11 items-center gap-1.5 rounded-full px-3 text-sm font-medium " + (active ? "bg-pine text-on-pine" : "text-muted hover:bg-card"),
+							"aria-current": active ? "page" : void 0,
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, {
+								className: "size-4",
+								"aria-hidden": "true"
+							}), item.label]
+						}, item.to);
+					})
+				})]
+			})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+			className: "mx-auto w-full max-w-2xl px-4 py-6 pb-16",
+			children
+		})]
+	});
+}
+function ProgressBar({ done, total }) {
+	const ratio = total === 0 ? 0 : done / total;
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "h-1.5 w-full overflow-hidden rounded-full bg-line",
+		"aria-hidden": "true",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "h-full rounded-full bg-pine",
+			style: { width: `${ratio * 100}%` }
+		})
+	});
+}
+var lessons = [
+	{
+		id: 1,
+		title: "Khái niệm và mục tiêu",
+		question: "Khái niệm, mục tiêu quản lý nhà nước về kinh tế? Trong nhóm mục tiêu đó, mục tiêu nào quan trọng nhất? Vì sao?",
+		answer: "Trong các mục tiêu tổng quát, quan trọng nhất là thúc đẩy tăng trưởng kinh tế nhanh và phát triển bền vững — sống còn với nước xuất phát điểm thấp, và là hạt nhân kéo các mục tiêu còn lại.",
+		frame: [
+			"Đặt vấn đề: thị trường có khuyết tật, Nhà nước phải điều tiết.",
+			"Khái niệm: tác động có tổ chức, có mục đích, bằng pháp quyền lên nền kinh tế quốc dân.",
+			"Cây mục tiêu: tối cao, rồi 3 trụ tổng quát.",
+			"Chọn tăng trưởng nhanh và bền vững; nêu 3 lý do.",
+			"Ví dụ FDI — Samsung, Bắc Ninh; kết bằng “chìa khóa nguồn lực”."
+		],
+		sections: [
+			{
+				title: "Khái niệm",
+				points: [
+					"Phan Huy Đường (2017): sự tác động có tổ chức, có mục đích của Nhà nước bằng pháp quyền lên các hoạt động kinh tế, để dùng hiệu quả tiềm năng, nhân lực và cơ hội, nhằm mục tiêu trước mắt và lâu dài.",
+					"Phạm Thị Hồng Điệp và cộng sự (2024): tác động có tổ chức, bằng quyền lực nhà nước, lên toàn bộ nền kinh tế quốc dân, qua phương pháp và công cụ phù hợp, trong môi trường biến động.",
+					"Chốt để viết bài: quản lý nhà nước về kinh tế là sự tác động có tổ chức, có mục đích và bằng pháp quyền của Nhà nước lên nền kinh tế quốc dân, nhằm sử dụng hiệu quả nguồn lực và cơ hội để đạt mục tiêu phát triển đã định.",
+					"Chủ thể là Nhà nước. Khách thể là toàn bộ nền kinh tế, không phải từng doanh nghiệp. Cái làm nên bản chất của hoạt động này là mục tiêu."
+				]
+			},
+			{
+				title: "Cây mục tiêu",
+				points: [
+					"Mục tiêu tối cao: Dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh. Không thay đích này bằng một chỉ tiêu GDP.",
+					"Tổng quát 1 — Tăng trưởng và phát triển bền vững: mở rộng quy mô (GDP, sản lượng), gắn kinh tế với dân số, xã hội và hệ sinh thái.",
+					"Tổng quát 2 — Ổn định vĩ mô và công bằng xã hội: giá, cán cân thanh toán, thu chi ngân sách, việc làm. Giảm dao động và bình ổn tổng cầu thì mới khuyến khích được tiết kiệm và đầu tư.",
+					"Tổng quát 3 — Chuyển dịch cơ cấu: theo ngành (công nghiệp, nông nghiệp, dịch vụ), theo lãnh thổ và theo thành phần kinh tế."
+				]
+			},
+			{
+				title: "Vì sao tăng trưởng nhanh và bền vững đứng đầu",
+				points: [
+					"Sống còn. Nước xuất phát thấp không mở được “phần bánh” thì ngân sách, việc làm, hạ tầng, an sinh đều thiếu. Không có tăng trưởng, Nhà nước chỉ phân phối sự thiếu hụt. Nhanh mà không bền là bong bóng; bền mà không nhanh thì mãi tụt hậu.",
+					"Hạt nhân. Ổn định giữ mặt bằng để đầu tư. Cơ cấu quyết định tăng trưởng đi vào ngành và vùng nào. Công bằng quyết định thành quả được chia thế nào. Đích tối cao không có chất liệu nếu thiếu tăng trưởng nhanh và bền.",
+					"Thực tiễn chọn thứ tự này. Năm 2009, Việt Nam dồn khu công nghiệp, ưu đãi và nhân lực tại Bắc Ninh, Thái Nguyên không phải để có nhà máy cho vui, mà để tạo sức bật qua công nghiệp điện tử xuất khẩu."
+				]
+			}
+		],
+		keys: [
+			"Đừng nhầm mục tiêu tối cao với mục tiêu quan trọng nhất trong nhóm tổng quát.",
+			"Câu chấm điểm: nhanh và bền phải đi cùng — một vế không cứu được vế kia.",
+			"Ba lý do nhớ máy: sống còn, hạt nhân, FDI."
+		],
+		exampleTitle: "Samsung và Bắc Ninh",
+		example: [
+			"Samsung ở lại vì mặt bằng vĩ mô đủ ổn. Cái Nhà nước theo đuổi là việc làm, kim ngạch, thu ngân sách và chuyển địa phương từ nông nghiệp sang công nghiệp.",
+			"Năm 2025, Bắc Ninh hơn 93 tỷ USD xuất khẩu. Sáu nhà máy lõi khoảng 65 tỷ USD doanh thu. Hai pháp nhân sản xuất điện thoại khoảng 500 tỷ USD xuất khẩu lũy kế.",
+			"Nếu chỉ chạy kim ngạch, bỏ môi trường, liên kết nội địa và năng lực con người, thành quả dễ thành lắp ráp gia công."
+		],
+		close: "Tăng trưởng nhanh và bền vững là chìa khóa tạo nguồn lực, để Nhà nước xử lý khuyết tật thị trường, giữ vĩ mô ổn định, chia thành quả công bằng hơn và hội nhập mà không ăn vào tương lai.",
+		checks: [
+			{
+				id: "c1-1",
+				text: "Nêu khái niệm, chỉ đúng chủ thể (Nhà nước) và khách thể (cả nền kinh tế)."
+			},
+			{
+				id: "c1-2",
+				text: "Tách mục tiêu tối cao khỏi 3 mục tiêu tổng quát."
+			},
+			{
+				id: "c1-3",
+				text: "Chọn tăng trưởng nhanh và phát triển bền vững, không chọn ổn định hay cơ cấu."
+			},
+			{
+				id: "c1-4",
+				text: "Có lý do sống còn và lý do hạt nhân."
+			},
+			{
+				id: "c1-5",
+				text: "Có ví dụ Samsung / Bắc Ninh và ít nhất một con số."
+			},
+			{
+				id: "c1-6",
+				text: "Nói rõ nhanh mà không bền, hoặc bền mà không nhanh, đều hỏng."
+			}
+		],
+		cards: [
+			{
+				id: "f1-1",
+				front: "Quản lý nhà nước về kinh tế là gì?",
+				back: "Tác động có tổ chức, có mục đích, bằng pháp quyền của Nhà nước lên nền kinh tế quốc dân, để dùng hiệu quả nguồn lực và cơ hội, đạt mục tiêu đã định."
+			},
+			{
+				id: "f1-2",
+				front: "Chủ thể và khách thể?",
+				back: "Chủ thể: Nhà nước. Khách thể: toàn bộ nền kinh tế quốc dân, không phải từng doanh nghiệp."
+			},
+			{
+				id: "f1-3",
+				front: "Mục tiêu tối cao?",
+				back: "Dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh."
+			},
+			{
+				id: "f1-4",
+				front: "Ba mục tiêu tổng quát?",
+				back: "Tăng trưởng và phát triển bền vững. Ổn định vĩ mô và công bằng xã hội. Chuyển dịch cơ cấu kinh tế."
+			},
+			{
+				id: "f1-5",
+				front: "Mục tiêu nào quan trọng nhất? Một câu.",
+				back: "Tăng trưởng nhanh và bền vững: sống còn với nước xuất phát thấp, và là hạt nhân kéo ổn định, cơ cấu, công bằng."
+			}
+		]
+	},
+	{
+		id: 2,
+		title: "Ba chức năng",
+		question: "Các chức năng quản lý nhà nước về kinh tế? Trong thực tiễn, chức năng nào quan trọng nhất? Giải thích.",
+		answer: "Ba chức năng là một vòng: định hướng chọn đích, tạo lập môi trường biến đích thành việc, kiểm tra giám sát giữ quỹ đạo. Trong thực tiễn, định hướng quan trọng nhất vì nó là kim chỉ nam — thiếu đích thì hai chức năng kia không biết phục vụ việc gì.",
+		frame: [
+			"Nêu nghĩa rộng (lập pháp, hành pháp, tư pháp) và nghĩa hẹp (Chính phủ điều hành).",
+			"Đủ 3 chức năng: định hướng, tạo lập môi trường, kiểm tra giám sát.",
+			"Nói chúng không thay được nhau — thiếu một mắt xích thì đứt.",
+			"Chọn định hướng là then chốt; môi trường là bệ phóng; giám sát là cân bằng.",
+			"Ví dụ FDI 2009: đích công nghiệp hóa xuất khẩu đi trước ưu đãi và thanh tra."
+		],
+		sections: [
+			{
+				title: "Định hướng sự phát triển",
+				points: [
+					"Là vấn đề cơ bản nhất. Nhà nước xác định chiến lược, đường lối, dự báo, quy hoạch và kế hoạch: làm gì, làm thế nào, khi nào, ai làm.",
+					"Gồm chiến lược kinh tế — xã hội tầm nhìn dài hạn, quy hoạch, kế hoạch 5 năm, kế hoạch năm và chương trình quốc gia.",
+					"Mục đích: phát triển ổn định, huy động nguồn lực trong và ngoài nước, tránh rủi ro lớn. Định hướng tạo tiền đề cho các chức năng còn lại."
+				]
+			},
+			{
+				title: "Tạo lập môi trường",
+				points: [
+					"Nhà nước không làm thay thị trường, mà kiến tạo môi trường thuận lợi.",
+					"Gồm ổn định chính trị; hạ tầng, quy định, hợp tác quốc tế; hệ thống pháp luật và cơ quan thi hành; các loại thị trường vận hành được; giáo dục — đào tạo và nhân lực chất lượng cao.",
+					"Chiến lược đúng mà thiếu môi trường thì chỉ nằm trên giấy."
+				]
+			},
+			{
+				title: "Kiểm tra, giám sát",
+				points: [
+					"Mang tính quyền lực và chính trị. Bảo đảm pháp luật và kế hoạch được chấp hành thống nhất.",
+					"Phát hiện kịp thời sai sót, ách tắc, khó khăn để nền kinh tế đi đúng hướng.",
+					"Cấp phép rồi bỏ mặc dễ dẫn tới chuyển giá, trốn thuế, ô nhiễm hoặc lệch mục tiêu ban đầu."
+				]
+			},
+			{
+				title: "Vì sao định hướng là quan trọng nhất",
+				points: [
+					"Không có chuẩn, nguồn lực bị phân tán. Cùng đất, lao động, vị trí địa lý — không chọn hướng thì ưu đãi và thanh tra không biết phục vụ việc gì.",
+					"Năm 2009, Việt Nam đã có định hướng thu hút FDI công nghệ cao, công nghiệp hóa theo hướng xuất khẩu. Bắc Ninh, Thái Nguyên vì thế không dừng ở nông nghiệp hay gia công giá trị thấp.",
+					"Vẫn phải nói nốt: môi trường làm đường đi được; giám sát giữ luật chơi. Thiếu mắt xích nào, vòng quản lý cũng đứt. Định hướng giữ vị trí then chốt trong thể thống nhất ấy."
+				]
+			}
+		],
+		keys: [
+			"Mẹo: Hướng — Môi — Soát. Hướng chọn đích, Môi làm đường, Soát giữ quỹ đạo.",
+			"Đừng viết “chỉ có định hướng là cần”. Viết “cả ba cần, định hướng then chốt”.",
+			"Câu kim chỉ nam: làm gì, làm thế nào, khi nào, ai làm."
+		],
+		exampleTitle: "Từ nghị quyết đến nhà máy",
+		example: ["Samsung không tự mọc trên nghị quyết. Nó vận hành vì định hướng đã được thể chế hóa: khu công nghiệp, ưu đãi thuế, hạ tầng, lao động được đào tạo.", "Sau 17 năm, hai pháp nhân sản xuất điện thoại tại Bắc Ninh và Thái Nguyên khoảng 500 tỷ USD xuất khẩu lũy kế. Năm 2025 Bắc Ninh đứng đầu xuất khẩu, hơn 93 tỷ USD, gần 20% kim ngạch cả nước. Sáu nhà máy lõi khoảng 65 tỷ USD doanh thu, khoảng 14% kim ngạch hàng hóa."],
+		close: "Ba chức năng là một thể. Định hướng quyết định hiệu quả của việc tạo môi trường và kiểm tra. Thực tiễn Việt Nam những năm qua khẳng định vai trò quyết định của chức năng này.",
+		checks: [
+			{
+				id: "c2-1",
+				text: "Kể đủ 3 chức năng và nội dung chính của từng chức năng."
+			},
+			{
+				id: "c2-2",
+				text: "Nói chúng là một hệ thống, không thay thế nhau."
+			},
+			{
+				id: "c2-3",
+				text: "Chọn định hướng là quan trọng nhất và giải thích “kim chỉ nam”."
+			},
+			{
+				id: "c2-4",
+				text: "Gán đúng vai: môi trường là bệ phóng, giám sát là cân bằng."
+			},
+			{
+				id: "c2-5",
+				text: "Ví dụ FDI 2009: đích đi trước ưu đãi và thanh tra."
+			}
+		],
+		cards: [
+			{
+				id: "f2-1",
+				front: "Ba chức năng quản lý nhà nước về kinh tế?",
+				back: "Định hướng sự phát triển. Tạo lập môi trường. Kiểm tra, giám sát hoạt động kinh tế."
+			},
+			{
+				id: "f2-2",
+				front: "Định hướng gồm những việc gì?",
+				back: "Chiến lược dài hạn, quy hoạch, kế hoạch 5 năm, kế hoạch năm, chương trình quốc gia."
+			},
+			{
+				id: "f2-3",
+				front: "Tạo lập môi trường gồm gì?",
+				back: "Ổn định chính trị, hạ tầng và quy định, pháp luật, thị trường đồng bộ, giáo dục — đào tạo."
+			},
+			{
+				id: "f2-4",
+				front: "Chức năng nào quan trọng nhất trong thực tiễn?",
+				back: "Định hướng. Nó trả lời làm gì, làm thế nào, khi nào, ai làm. Thiếu đích, môi trường và giám sát không có chuẩn."
+			},
+			{
+				id: "f2-5",
+				front: "Một câu về quan hệ ba chức năng?",
+				back: "Định hướng chọn đích, môi trường biến đích thành hiện thực, giám sát giữ quỹ đạo. Thiếu một mắt xích thì vòng quản lý đứt."
+			}
+		]
+	},
+	{
+		id: 3,
+		title: "Bốn công cụ",
+		question: "Để quản lý nền kinh tế nước ta, Nhà nước cần dùng hệ thống công cụ chủ yếu nào? Phân tích tầm quan trọng và cho ví dụ.",
+		answer: "Bốn công cụ đi thành một chỉnh thể: pháp luật là hành lang, kế hoạch chỉ đích, chính sách vĩ mô là đòn bẩy, tài sản quốc gia là bệ phóng vật chất. Thiếu một công cụ, ba công cụ kia không đủ lực.",
+		frame: [
+			"Định nghĩa công cụ: phương tiện để Nhà nước tác động trực tiếp hoặc gián tiếp, hướng nền kinh tế theo mục tiêu.",
+			"Pháp luật — hành lang và trật tự.",
+			"Kế hoạch — chiến lược, quy hoạch, trung hạn, hàng năm.",
+			"Chính sách vĩ mô — tài khóa, tiền tệ, đầu tư, thương mại.",
+			"Tài sản quốc gia — ngân sách, tài nguyên, dự trữ, hạ tầng, DNNN. Ví dụ FDI cho cả bốn. Kết: phối hợp đồng bộ."
+		],
+		sections: [
+			{
+				title: "Công cụ là gì",
+				points: ["Theo giáo trình Quản lý nhà nước về kinh tế (2024, NXB ĐHQG Hà Nội): công cụ là phương tiện, hình thức vận động của phương pháp quản lý, do Nhà nước dùng để tác động trực tiếp hoặc gián tiếp tới quá trình kinh tế và chủ thể kinh tế.", "Mục đích: hướng dẫn và điều chỉnh nền kinh tế theo mục tiêu đã định."]
+			},
+			{
+				title: "Pháp luật",
+				points: [
+					"Phan Huy Đường (2017): hệ thống quy tắc xử sự bắt buộc chung, thể hiện ý chí của giai cấp thống trị và cộng đồng, do Nhà nước đặt ra, thực thi và bảo vệ.",
+					"Là công cụ đầu tiên, trực tiếp nhất. Tạo hành lang, trật tự, hướng dẫn hành vi. Quy định hợp trình độ phát triển thì thúc đẩy; lệch thì kìm hãm.",
+					"Ví dụ: Luật Đầu tư bảo đảm quyền tài sản và giải quyết tranh chấp minh bạch, góp phần thu hút FDI."
+				]
+			},
+			{
+				title: "Kế hoạch",
+				points: [
+					"Là quyết định của Nhà nước về mục tiêu, biện pháp và nguồn lực trong một thời kỳ, để phối hợp các quyết định dài hạn: đầu tư, việc làm, thu nhập.",
+					"Gồm chiến lược (thường 10 năm), quy hoạch, kế hoạch trung hạn 5 năm và kế hoạch năm. Giúp hạn chế ách tắc, dùng nguồn lực tốt hơn.",
+					"Ví dụ: quy hoạch bố trí khu công nghiệp trọng điểm tại Bắc Ninh, Thái Nguyên, Bình Dương cho FDI công nghệ cao."
+				]
+			},
+			{
+				title: "Chính sách kinh tế vĩ mô",
+				points: [
+					"Tập hợp hoạt động dùng tiềm lực Nhà nước chi phối được để đổi trạng thái thị trường, từ đó điều tiết hành vi của chủ thể, hướng tới mục tiêu vĩ mô.",
+					"Nhóm chính: tài khóa, tiền tệ, đầu tư, thương mại quốc tế. Hợp với kinh tế thị trường: vừa phát huy thế mạnh, vừa sửa khiếm khuyết.",
+					"Ví dụ: miễn, giảm thuế thu nhập doanh nghiệp những năm đầu và các FTA tạo lợi thế cho FDI công nghệ cao."
+				]
+			},
+			{
+				title: "Công cụ vật chất — tài sản quốc gia",
+				points: [
+					"Là tổng thể nguồn lực quốc gia mà Nhà nước làm chủ, đưa ra khai thác cho mục tiêu quản lý.",
+					"Gồm ngân sách, tài nguyên, quỹ dự trữ, kết cấu hạ tầng, doanh nghiệp nhà nước. Dùng để điều chỉnh, lập lại cân bằng, nâng năng suất của mọi chủ thể.",
+					"Ví dụ: ngân sách giải phóng mặt bằng, làm điện, đường, cảng. Thiếu hạ tầng thì luật và ưu đãi có hấp dẫn cũng không đón được vốn."
+				]
+			}
+		],
+		keys: [
+			"Mẹo bốn chữ: Pháp — Kế — Sách — Vật.",
+			"Một câu vai: hành lang, đích, đòn bẩy, bệ phóng.",
+			"Mỗi công cụ phải có một ví dụ, đừng phân tích chung chung cả bốn."
+		],
+		exampleTitle: "Cùng một dòng FDI, bốn công cụ",
+		example: ["Luật Đầu tư mở hành lang niềm tin. Quy hoạch chỉ Bắc Ninh, Thái Nguyên, Bình Dương là nơi đón công nghệ cao. Thuế và FTA là đòn bẩy. Ngân sách làm mặt bằng và hạ tầng thì vốn mới vào được nhà máy."],
+		close: "Bốn công cụ không đứng riêng. Phối hợp linh hoạt, đồng bộ là điều kiện để quản lý nền kinh tế thị trường định hướng xã hội chủ nghĩa phát triển bền vững và hội nhập.",
+		checks: [
+			{
+				id: "c3-1",
+				text: "Kể đủ 4 công cụ và định nghĩa ngắn từng công cụ."
+			},
+			{
+				id: "c3-2",
+				text: "Gán đúng vai: hành lang, đích, đòn bẩy, bệ phóng."
+			},
+			{
+				id: "c3-3",
+				text: "Chính sách vĩ mô có tên được tài khóa, tiền tệ, đầu tư, thương mại."
+			},
+			{
+				id: "c3-4",
+				text: "Tài sản quốc gia có ngân sách, hạ tầng, không chỉ nói “vật chất”."
+			},
+			{
+				id: "c3-5",
+				text: "Mỗi công cụ có ví dụ, hoặc một ví dụ FDI xâu cả bốn."
+			},
+			{
+				id: "c3-6",
+				text: "Kết luận nói chúng là một chỉnh thể, không dùng rời."
+			}
+		],
+		cards: [
+			{
+				id: "f3-1",
+				front: "Bốn công cụ chủ yếu?",
+				back: "Pháp luật. Kế hoạch. Chính sách kinh tế vĩ mô. Tài sản quốc gia (công cụ vật chất)."
+			},
+			{
+				id: "f3-2",
+				front: "Một câu về vai của bốn công cụ?",
+				back: "Pháp luật tạo hành lang. Kế hoạch chỉ đích. Chính sách là đòn bẩy. Tài sản quốc gia là bệ phóng hạ tầng và nguồn lực."
+			},
+			{
+				id: "f3-3",
+				front: "Kế hoạch có những tầng nào?",
+				back: "Chiến lược khoảng 10 năm, quy hoạch, kế hoạch 5 năm, kế hoạch hàng năm."
+			},
+			{
+				id: "f3-4",
+				front: "Chính sách vĩ mô gồm nhóm nào?",
+				back: "Tài khóa, tiền tệ, đầu tư, thương mại quốc tế."
+			},
+			{
+				id: "f3-5",
+				front: "Tài sản quốc gia gồm gì?",
+				back: "Ngân sách, tài nguyên, quỹ dự trữ quốc gia, kết cấu hạ tầng, doanh nghiệp nhà nước."
+			}
+		]
+	},
+	{
+		id: 4,
+		title: "Bộ máy và tinh gọn",
+		question: "Phân tích cơ cấu bộ máy quản lý nhà nước về kinh tế ở Việt Nam. Vì sao hiện nay Nhà nước cần đổi mới bộ máy này?",
+		answer: "Bộ máy chạy dọc từ Quốc hội — Chính phủ — tư pháp xuống tỉnh rồi xã. Từ 1/7/2025 địa phương còn hai cấp. Phải đổi mới vì bộ máy cũ thừa tầng, chồng việc, và vì đối tượng quản lý đã là kinh tế số.",
+		frame: [
+			"Mở bằng một ý: bộ máy quyết định chính sách xuống cơ sở nhanh hay đùn đẩy.",
+			"Trung ương: Quốc hội thể chế, Chính phủ điều hành, tòa án và viện kiểm sát giữ luật chơi.",
+			"Địa phương hai cấp: tỉnh điều phối, xã thực thi. Không còn huyện.",
+			"Vì sao tinh gọn: cồng kềnh, chồng chéo; khoa học công nghệ đổi đối tượng quản lý.",
+			"Kết: sắp xếp 2025 là đột phá tổ chức; hiệu quả còn tùy quy trình, dữ liệu và trách nhiệm."
+		],
+		sections: [
+			{
+				title: "Trung ương — thể chế và điều hành vĩ mô",
+				points: [
+					"Quốc hội ban hành luật kinh tế, quyết định vấn đề kinh tế lớn, thông qua kế hoạch và ngân sách, giám sát tối cao. Ủy ban Kinh tế và Ủy ban Tài chính — Ngân sách là đầu mối thẩm tra.",
+					"Chính phủ là nòng cốt điều hành. Khóa XVI (từ 4/2026) có 14 bộ và 3 cơ quan ngang bộ. Sáp nhập từ 1/3/2025 cắt tầng trung gian: Bộ Tài chính, Bộ Nông nghiệp và Môi trường, Bộ Xây dựng giảm khoảng 45–46% đầu mối so với hai bộ cũ.",
+					"Tòa án và Viện kiểm sát bảo vệ pháp luật kinh tế: hợp đồng, phá sản, cạnh tranh, tham nhũng, môi trường. Ưu đãi và giấy phép thiếu tư pháp mạnh thì méo luật chơi."
+				]
+			},
+			{
+				title: "Địa phương — hai cấp",
+				points: [
+					"Luật Tổ chức chính quyền địa phương 2025: còn cấp tỉnh (tỉnh, thành phố trực thuộc trung ương) và cấp xã (xã, phường, đặc khu). Không còn huyện, quận, thị xã, thành phố thuộc tỉnh.",
+					"Cấp tỉnh: HĐND quyết định chủ trương, ngân sách, giám sát; ban then chốt là Kinh tế — Ngân sách và Pháp chế. UBND và các sở cụ thể hóa quy hoạch, thu hút đầu tư, đất đai, hạ tầng. Bỏ huyện thì sở là cầu nối thẳng xuống địa bàn đã sáp nhập.",
+					"Cấp xã: HĐND và UBND. Việc của huyện chuyển về xã. UBND xã tối đa khoảng 4 phòng chuyên môn. Đất đai, hộ kinh doanh, dịch vụ công, thủ tục đầu tư nhỏ nằm sát dân.",
+					"Con số đề cương: 63 tỉnh còn 34; 696 đơn vị cấp huyện kết thúc; cấp xã còn 3.321. Mốc chạy chính quyền hai cấp: 1/7/2025."
+				]
+			},
+			{
+				title: "Vì sao phải đổi mới, tinh gọn",
+				points: [
+					"Bộ máy còn cồng kềnh, chồng chéo, nhiều tầng. Một việc — đất, thuế, đầu tư, môi trường — đi nhiều cửa, dễ đùn đẩy, chi phí tuân thủ cao.",
+					"Kết quả sắp xếp 2025 trong đề cương: giảm 46% đơn vị cấp tỉnh, 100% cấp huyện, gần 67% cấp xã; sắp xếp 30/30 tổng cục; cắt hơn 1.000 cục, vụ và hơn 4.400 chi cục.",
+					"Rủi ro mới: bộ to, sở to, xã quá tải nếu gom việc mà không gom quy trình và không đủ năng lực. Phải phân định chức năng, gắn thẩm quyền với trách nhiệm.",
+					"Khoa học công nghệ đổi đối tượng quản lý. Kinh tế số, thương mại điện tử, dữ liệu, trí tuệ nhân tạo không quản bằng hồ sơ giấy. EGDI 2024 hạng 71/193, tăng 15 bậc so với 2022 — hướng đúng, nhưng tinh gọn tổ chức mà không đổi công cụ thì chỉ giảm người, không tăng hiệu lực."
+				]
+			}
+		],
+		keys: [
+			"Hai mốc: 1/3/2025 bộ ngành; 1/7/2025 chính quyền hai cấp.",
+			"Nhớ số: 34 tỉnh, hết huyện, 3.321 xã, 14 bộ + 3 cơ quan ngang bộ.",
+			"Hai lý do đổi mới: thừa tầng; đối tượng quản lý đã đổi."
+		],
+		exampleTitle: "Chỗ dễ mất điểm",
+		example: ["Đừng viết bộ máy địa phương còn ba cấp. Đề đang hỏi cơ cấu hiện nay: tỉnh và xã.", "Đừng kết “sáp nhập xong là xong”. Phải nói rủi ro xã quá tải và yêu cầu Chính phủ số, dữ liệu dùng chung, dịch vụ lấy dân và doanh nghiệp làm trọng tâm."],
+		close: "Trung ương thể chế hóa và điều hành vĩ mô, tư pháp giữ luật chơi. Địa phương: tỉnh hoạch định, xã thực thi. Đổi mới là cần vì bộ máy cũ thừa tầng và vì đối tượng quản lý đã đổi. Sắp xếp 2025 mới là đột phá tổ chức; hiệu quả còn phụ thuộc tinh gọn bên trong và quản trị bằng dữ liệu, dịch vụ, trách nhiệm rõ.",
+		checks: [
+			{
+				id: "c4-1",
+				text: "Có Quốc hội, Chính phủ, tòa án và viện kiểm sát — không chỉ nói các bộ."
+			},
+			{
+				id: "c4-2",
+				text: "Địa phương đúng hai cấp, nói rõ không còn huyện."
+			},
+			{
+				id: "c4-3",
+				text: "Có số: 34 tỉnh, 3.321 xã, hoặc 14 bộ và 3 cơ quan ngang bộ."
+			},
+			{
+				id: "c4-4",
+				text: "Nêu việc tỉnh làm gì, xã làm gì sau khi nhận việc của huyện."
+			},
+			{
+				id: "c4-5",
+				text: "Hai lý do đổi mới: chồng chéo nhiều tầng, và kinh tế số."
+			},
+			{
+				id: "c4-6",
+				text: "Có cảnh báo xã quá tải hoặc tinh gọn mà không đổi công cụ thì chưa tăng hiệu lực."
+			}
+		],
+		cards: [
+			{
+				id: "f4-1",
+				front: "Bộ máy trung ương về kinh tế gồm những nhánh nào?",
+				back: "Quốc hội thể chế và giám sát. Chính phủ và các bộ điều hành. Tòa án và Viện kiểm sát giữ luật chơi kinh tế."
+			},
+			{
+				id: "f4-2",
+				front: "Chính phủ khóa XVI có bao nhiêu bộ?",
+				back: "14 bộ và 3 cơ quan ngang bộ, từ tháng 4/2026. Sáp nhập bộ ngành chạy từ 1/3/2025."
+			},
+			{
+				id: "f4-3",
+				front: "Chính quyền địa phương hiện còn mấy cấp?",
+				back: "Hai cấp từ 1/7/2025: tỉnh và xã. Bỏ huyện. 63 tỉnh còn 34; hết 696 huyện; còn 3.321 xã."
+			},
+			{
+				id: "f4-4",
+				front: "Tỉnh và xã mỗi cấp làm gì?",
+				back: "Tỉnh: quy hoạch, ngân sách, thu hút đầu tư, hạ tầng, các sở. Xã: thi hành sát dân, nhận việc cũ của huyện, tối đa khoảng 4 phòng."
+			},
+			{
+				id: "f4-5",
+				front: "Vì sao phải tinh gọn?",
+				back: "Bộ máy thừa tầng, một việc nhiều cửa. Kinh tế số không quản bằng hồ sơ giấy. EGDI 2024 hạng 71/193."
+			}
+		]
+	},
+	{
+		id: 5,
+		title: "Vai trò công chức",
+		question: "Phân tích vai trò của công chức quản lý nhà nước về kinh tế. Vì sao trong thế kỷ XXI vai trò này ngày càng tăng?",
+		answer: "Công chức là người đưa chính sách vào đời sống: vừa xây vừa thực thi và giám sát, quyết định hiệu lực bộ máy, là cầu nối với dân và doanh nghiệp, và là người làm cải cách hành chính. Thế kỷ XXI nâng vai này vì hội nhập và kinh tế số không quản bằng thói quen cũ.",
+		frame: [
+			"Mở: pháp luật là bản thiết kế, công chức là người đưa thiết kế vào việc.",
+			"Bốn vai: xây và thực thi; nòng cốt hiệu lực; cầu nối dân — doanh nghiệp; quyết định cải cách hành chính.",
+			"Vì sao tăng: toàn cầu hóa, phải bảo vệ lợi ích quốc gia.",
+			"Vì sao tăng: cách mạng khoa học công nghệ và kinh tế số.",
+			"Kết: từ người chấp hành sang người kiến tạo hệ sinh thái."
+		],
+		sections: [
+			{
+				title: "Công chức kinh tế là ai",
+				points: ["Là người làm việc lâu dài, ổn định trong bộ máy nhà nước, có tư cách pháp lý khi thi hành công vụ về kế hoạch, tài chính, thuế, thương mại, đầu tư, nông nghiệp, hạ tầng.", "Nếu chính sách là bản thiết kế thì công chức là người đưa bản thiết kế đó vào thủ tục, đàm phán, số liệu và quyết định hàng ngày."]
+			},
+			{
+				title: "Bốn vai trò",
+				points: [
+					"Thứ nhất, vừa tham gia xây dựng vừa tổ chức thực hiện và thanh tra, kiểm tra: đường lối, pháp luật, chiến lược, chương trình, đề án, kế hoạch và công cụ quản lý kinh tế.",
+					"Thứ hai, vai trò nòng cốt, quyết định hiệu lực, hiệu quả của bộ máy. Chính sách đúng vẫn thất bại nếu người thực thi yếu.",
+					"Thứ ba, cầu nối với dân, cộng đồng và doanh nghiệp: giải quyết thủ tục, tháo gỡ vướng mắc, kiến tạo môi trường kinh doanh.",
+					"Thứ tư, quyết định cải cách hành chính, tức là tự nâng hiệu lực của chính bộ máy mình đang ngồi."
+				]
+			},
+			{
+				title: "Vì sao thế kỷ XXI vai trò tăng lên",
+				points: [
+					"Toàn cầu hóa và hội nhập. Thị trường rộng hơn nhưng cú sốc cũng vào nhanh hơn. Công chức phải đàm phán, tham gia định chế thương mại, bảo vệ lợi ích kinh tế quốc gia — không chỉ quản việc trong nước.",
+					"Cách mạng khoa học công nghệ và kinh tế số. Thương mại điện tử, dịch vụ trực tuyến, tiền số, dữ liệu lớn buộc đổi cách làm: Chính phủ điện tử, quản lý bằng dữ liệu, lấy người dùng làm trọng tâm. Chính công chức là người thực hiện chuyển đổi đó.",
+					"Ví dụ mở bài: EVFTA, CPTPP chỉ thành lợi ích của doanh nghiệp khi có công chức hiểu luật quốc tế, gỡ rào cản kỹ thuật và số hóa thủ tục hải quan."
+				]
+			}
+		],
+		keys: [
+			"Bốn vai nhớ: xây—làm, hiệu lực, cầu nối, cải cách.",
+			"Hai lực thế kỷ XXI: hội nhập và công nghệ. Đừng chỉ viết một lực.",
+			"Câu kết đẹp và đúng: từ người thi hành công vụ thành người kiến tạo."
+		],
+		exampleTitle: "FTA không tự chạy",
+		example: ["Thuế suất ưu đãi trong EVFTA hay CPTPP nằm trên giấy nếu hải quan, chứng nhận xuất xứ và rào cản kỹ thuật không được công chức xử lý đúng và nhanh."],
+		close: "Vai trò trải từ hoạch định đến thực thi, giám sát và phục vụ. Trước hội nhập và số hóa, sự nhạy bén và chuyên môn của công chức là lực quyết định để quốc gia nắm cơ hội và giữ lợi ích kinh tế.",
+		checks: [
+			{
+				id: "c5-1",
+				text: "Đủ 4 vai trò, không chỉ nói “tham mưu và thực thi”."
+			},
+			{
+				id: "c5-2",
+				text: "Có ý: chính sách đúng vẫn hỏng nếu công chức yếu."
+			},
+			{
+				id: "c5-3",
+				text: "Có cầu nối với dân và doanh nghiệp."
+			},
+			{
+				id: "c5-4",
+				text: "Giải thích hội nhập: bảo vệ lợi ích quốc gia, không chỉ “mở cửa”."
+			},
+			{
+				id: "c5-5",
+				text: "Giải thích công nghệ: Chính phủ số, dữ liệu, mô hình kinh doanh mới."
+			}
+		],
+		cards: [
+			{
+				id: "f5-1",
+				front: "Bốn vai trò của công chức quản lý kinh tế?",
+				back: "Xây và thực thi chính sách. Quyết định hiệu lực bộ máy. Cầu nối dân và doanh nghiệp. Quyết định cải cách hành chính."
+			},
+			{
+				id: "f5-2",
+				front: "Vì sao gọi họ là nòng cốt?",
+				back: "Một chính sách đúng vẫn thất bại nếu người tổ chức thực hiện yếu về năng lực."
+			},
+			{
+				id: "f5-3",
+				front: "Hội nhập buộc công chức làm thêm việc gì?",
+				back: "Đàm phán, tham gia định chế thương mại, gỡ rào cản, bảo vệ lợi ích kinh tế quốc gia trước cú sốc bên ngoài."
+			},
+			{
+				id: "f5-4",
+				front: "Công nghệ đổi vai công chức thế nào?",
+				back: "Từ hồ sơ giấy sang Chính phủ số, dữ liệu lớn, quản lý mô hình mới như thương mại điện tử. Họ là người trực tiếp chuyển đổi số."
+			}
+		]
+	},
+	{
+		id: 6,
+		title: "Tiêu chuẩn và phân loại",
+		question: "Phân tích tiêu chuẩn và phân loại công chức quản lý nhà nước về kinh tế. Để đáp ứng tiêu chuẩn đó, công chức cần làm gì?",
+		answer: "Chuẩn là đủ đức và đủ tài. Phân loại theo trình độ, vị trí, ngạch bậc, chuyên ngành, ngành — đơn vị để bố trí đúng người. Muốn đạt chuẩn thì rèn đức, học liên tục và bám việc thật.",
+		frame: [
+			"Mở: chủ trương đúng vẫn chết ở thực thi nếu đức yếu hoặc tài hỏng.",
+			"Tiêu chuẩn 1: phẩm chất chính trị, đạo đức công vụ, cần kiệm liêm chính.",
+			"Tiêu chuẩn 2: kiến thức, trình độ, năng lực.",
+			"Năm cách phân loại — để bố trí, không phải để gắn mác.",
+			"Việc phải làm: rèn đức, học cho đủ tài, bám cơ sở. Kết: tinh gọn bộ máy không cứu được công chức không đạt chuẩn."
+		],
+		sections: [
+			{
+				title: "Phẩm chất chính trị và đạo đức",
+				points: [
+					"Trung thành với lợi ích quốc gia, dân tộc, nhân dân; bản lĩnh vững khi điều hành đụng lợi ích nhóm.",
+					"Đặt lợi ích chung trên lợi ích cá nhân; trung thực; cần, kiệm, liêm, chính, chí công vô tư.",
+					"Không tham nhũng, quan liêu, vụ lợi; không tiếp tay lợi ích nhóm; nói đi đôi với làm.",
+					"Kỷ luật, gắn dân và doanh nghiệp, văn hóa công vụ. Công chức kinh tế cầm giấy phép, đất, thuế, ngân sách — chỗ dễ nảy sinh nhũng nhiễu."
+				]
+			},
+			{
+				title: "Kiến thức, trình độ, năng lực",
+				points: [
+					"Kiến thức: vững chính sách và pháp luật kinh tế; hiểu công cụ vĩ mô (ngân sách, thuế, tiền tệ, quy hoạch, đầu tư) và khuyết tật thị trường. Không nắm luật thì vừa làm sai vừa gây rủi ro cho Nhà nước.",
+					"Trình độ: đào tạo tương ứng vị trí; nghiệp vụ kinh tế thường từ đại học đúng ngành hoặc liên ngành. Bằng không đủ — phải cập nhật hội nhập, kinh tế số, dữ liệu.",
+					"Năng lực: phân tích và tham mưu, tổ chức thực thi, phối hợp liên ngành, xử lý tình huống, dùng công nghệ trong công vụ."
+				]
+			},
+			{
+				title: "Phân loại — năm cách",
+				points: [
+					"Theo trình độ đào tạo: đại học, thạc sĩ, tiến sĩ, kèm chứng chỉ bồi dưỡng. Trình độ gợi độ phức tạp của việc, không đương nhiên thành lãnh đạo.",
+					"Theo vị trí: trung ương (Quốc hội, Chính phủ, bộ) lo thể chế và phân bổ nguồn lực; tỉnh hoạch định và điều phối; xã thực thi sát dân.",
+					"Theo ngạch, bậc: chuyên viên, chuyên viên chính, chuyên viên cao cấp. Bậc gắn lương, thâm niên và kết quả. Ngạch — bậc là thước đo nghề, không nhầm với chức vụ.",
+					"Theo chuyên ngành được đào tạo và dùng: tài chính — kế toán, luật kinh tế, quy hoạch — đầu tư, thống kê, thương mại, nông nghiệp, môi trường, hạ tầng.",
+					"Theo ngành, đơn vị: thuế khác công thương, dù cùng ngạch chuyên viên. Đối tượng, rủi ro và kỹ năng khác nhau."
+				]
+			},
+			{
+				title: "Công chức cần làm gì",
+				points: [
+					"Rèn đức trước. Tự soi, tự sửa; không biến công vụ thành đặc quyền. Minh bạch quy trình đất, thuế, ưu đãi là chống tham nhũng cụ thể.",
+					"Học cho đủ tài. Cập nhật luật, điều hành vĩ mô, hội nhập; học công cụ số và dịch vụ công trực tuyến. Bằng cũ không đủ nếu chính sách đổi mỗi năm.",
+					"Bám việc thật. Xuống cơ sở, nghe doanh nghiệp và dân, không đùn đẩy liên ngành. Tham mưu phải ra phương án khả thi, đúng luật, đúng lúc — nhất là khi việc huyện đã dồn về xã."
+				]
+			}
+		],
+		keys: [
+			"Hai chuẩn: đức và tài. Đừng viết tiêu chuẩn chỉ toàn bằng cấp.",
+			"Năm lát cắt phân loại: học vấn, chỗ ngồi, ngạch, nghề, cơ quan.",
+			"Ba việc: rèn, học, bám. Khớp đúng hai chuẩn, không thêm khẩu hiệu lạ."
+		],
+		exampleTitle: "Ví dụ một câu cho bài viết",
+		example: ["Một giấy phép chậm, một ưu đãi bị làm giá, một số liệu sai — môi trường đầu tư méo ngay. Vì thế chuẩn đức — tài không phải mục riêng của công tác cán bộ; nó là điều kiện của quản lý kinh tế."],
+		close: "Phân loại là công cụ bố trí và đãi ngộ, không phải mục đích. Bộ máy có thể tinh gọn; nếu công chức không đủ đức và tài, quản lý kinh tế vẫn kém hiệu lực.",
+		checks: [
+			{
+				id: "c6-1",
+				text: "Có cả phẩm chất chính trị và nhóm kiến thức — trình độ — năng lực."
+			},
+			{
+				id: "c6-2",
+				text: "Nhắc cần, kiệm, liêm, chính và rủi ro nhũng nhiễu ở đất, thuế, ưu đãi."
+			},
+			{
+				id: "c6-3",
+				text: "Đủ 5 cách phân loại, có phân biệt ngạch với chức vụ."
+			},
+			{
+				id: "c6-4",
+				text: "Nói phân loại để bố trí, không phải để gắn mác."
+			},
+			{
+				id: "c6-5",
+				text: "Việc cần làm khớp hai chuẩn: rèn đức, học, bám thực tiễn."
+			}
+		],
+		cards: [
+			{
+				id: "f6-1",
+				front: "Hai nhóm tiêu chuẩn?",
+				back: "Đức: phẩm chất chính trị, đạo đức công vụ, cần kiệm liêm chính. Tài: kiến thức, trình độ, năng lực."
+			},
+			{
+				id: "f6-2",
+				front: "Năm cách phân loại công chức kinh tế?",
+				back: "Trình độ đào tạo. Vị trí công tác. Ngạch và bậc. Chuyên ngành. Ngành, đơn vị."
+			},
+			{
+				id: "f6-3",
+				front: "Ngạch khác chức vụ chỗ nào?",
+				back: "Ngạch là cấp độ chuyên môn và thang nghề. Chức vụ là vị trí lãnh đạo được bổ nhiệm. Không được nhầm hai thước này."
+			},
+			{
+				id: "f6-4",
+				front: "Để đạt chuẩn, công chức làm gì?",
+				back: "Rèn đức và minh bạch quy trình. Học luật, vĩ mô, công cụ số. Bám cơ sở, nghe dân và doanh nghiệp, tham mưu phương án làm được."
+			}
+		]
+	},
+	{
+		id: 7,
+		title: "Tác động hội nhập",
+		question: "Phân tích một số tác động của hội nhập quốc tế đến công tác quản lý nhà nước về kinh tế ở Việt Nam. Cho ví dụ.",
+		answer: "Hội nhập vừa ép hoàn thiện thể chế, mở thị trường, hút vốn và công nghệ, vừa làm nền kinh tế phụ thuộc xuất nhập khẩu, vốn ngoài và thu hẹp không gian chính sách. Quản lý nhà nước phải hội nhập có lá chắn.",
+		frame: [
+			"Mở: hội nhập là xu thế, tác động đa chiều tới cách Nhà nước quản lý.",
+			"Tích cực: thể chế, thị trường và FDI, vốn — công nghệ — nhân lực, chuyển dịch cơ cấu.",
+			"Tiêu cực: phụ thuộc xuất nhập khẩu, phụ thuộc vốn, độ mở, phân phối lợi ích — rủi ro, không gian chính sách.",
+			"Ví dụ đôi: EVFTA, CPTPP và đứt chuỗi COVID.",
+			"Kết: cân bằng giữa tranh thủ nguồn lực và giữ tự chủ."
+		],
+		sections: [{
+			title: "Tác động tích cực",
+			points: [
+				"Thúc đẩy hoàn thiện thể chế. FTA tạo sức ép sửa luật, chính sách, sở hữu trí tuệ, lao động cho khớp chuẩn mực quốc tế.",
+				"Mở thị trường và thu hút FDI. Gỡ rào cản cho xuất nhập khẩu; cải thiện chuỗi cung ứng và tăng trưởng.",
+				"Mở đường tới vốn, chuyển giao công nghệ và nâng chất lượng nhân lực.",
+				"Đa dạng hóa và chuyển dịch cơ cấu theo hướng hiện đại; đồng thời tạo điều kiện hội nhập văn hóa, chính trị và củng cố an ninh — quốc phòng."
+			]
+		}, {
+			title: "Tác động tiêu cực",
+			points: [
+				"Độc lập, tự chủ về xuất nhập khẩu còn thấp. Nhiều hàng trọng yếu phụ thuộc nguồn cung ngoài. Xuất khẩu lại dựa vào vài thị trường chủ chốt.",
+				"Phụ thuộc vốn nước ngoài. Huy động được nguồn lực, nhưng khủng hoảng tài chính toàn cầu gây tổn thất lớn hơn.",
+				"Độ mở cao khiến cú sốc bên ngoài truyền thẳng vào sản xuất trong nước.",
+				"Lợi ích và rủi ro phân phối không đều: chênh lệch thu nhập, sức ép khai thác tài nguyên, ô nhiễm, mai một bản sắc.",
+				"Thách thức với quyền lực Nhà nước: cam kết FTA thu hẹp không gian tự quyết chính sách và pháp luật nội bộ."
+			]
+		}],
+		keys: [
+			"Bài này chấm theo cặp: mỗi ý tích cực nên có một rủi ro tương ứng, đừng viết một danh sách dài một phía.",
+			"Câu quản lý, không phải câu “kim ngạch tăng”. Hỏi tác động tới công tác quản lý nhà nước.",
+			"Số dễ nhớ: xuất khẩu khoảng 48 tỷ USD năm 2007, khoảng 370 tỷ năm 2022."
+		],
+		exampleTitle: "Hai mặt của cùng một cửa mở",
+		example: ["Tích cực: tham gia EVFTA và CPTPP, Việt Nam rà soát, sửa Bộ luật Lao động, Luật Sở hữu trí tuệ, Luật Doanh nghiệp. Môi trường kinh doanh minh bạch hơn. Kim ngạch xuất khẩu hàng hóa từ khoảng 48 tỷ USD năm 2007 lên khoảng 370 tỷ USD năm 2022. Tỷ lệ xuất khẩu/GDP khoảng 100% năm 2021; tổng kim ngạch xuất nhập khẩu khoảng 180% GDP. Dệt may, da giày, nông sản sang châu Âu tăng mạnh.", "Tiêu cực: COVID-19 và đứt gãy địa chính trị làm dệt may, điện tử thiếu nguyên liệu vì phụ thuộc nguồn nhập. Cơ quan quản lý bị động trong bình ổn sản xuất."],
+		close: "Quản lý hiện đại không đóng cửa, cũng không mở cửa rồi đứng nhìn. Phải chủ động lấy vốn và công nghệ, đồng thời dựng lá chắn thể chế để giữ tự chủ và lợi ích cốt lõi khi thị trường thế giới đảo chiều.",
+		checks: [
+			{
+				id: "c7-1",
+				text: "Có ít nhất bốn tác động tích cực, trong đó có hoàn thiện thể chế."
+			},
+			{
+				id: "c7-2",
+				text: "Có phụ thuộc xuất nhập khẩu và phụ thuộc vốn nước ngoài."
+			},
+			{
+				id: "c7-3",
+				text: "Có ý FTA thu hẹp không gian chính sách của Nhà nước."
+			},
+			{
+				id: "c7-4",
+				text: "Ví dụ tích cực có tên hiệp định hoặc số kim ngạch."
+			},
+			{
+				id: "c7-5",
+				text: "Ví dụ tiêu cực nói được sự bị động của cơ quan quản lý, không chỉ kể thiệt hại doanh nghiệp."
+			}
+		],
+		cards: [
+			{
+				id: "f7-1",
+				front: "Hội nhập tác động tích cực tới quản lý nhà nước thế nào?",
+				back: "Ép hoàn thiện thể chế, mở thị trường, thu hút FDI, tiếp cận vốn và công nghệ, nâng nhân lực, chuyển dịch cơ cấu."
+			},
+			{
+				id: "f7-2",
+				front: "Ba rủi ro cốt lõi?",
+				back: "Phụ thuộc xuất nhập khẩu và vài thị trường. Phụ thuộc vốn ngoài. Cam kết quốc tế thu hẹp không gian chính sách."
+			},
+			{
+				id: "f7-3",
+				front: "Ví dụ thể chế từ FTA?",
+				back: "EVFTA và CPTPP buộc rà soát Bộ luật Lao động, Luật Sở hữu trí tuệ, Luật Doanh nghiệp."
+			},
+			{
+				id: "f7-4",
+				front: "Số kim ngạch để nhớ?",
+				back: "Xuất khẩu hàng hóa khoảng 48 tỷ USD năm 2007 lên khoảng 370 tỷ USD năm 2022. Xuất khẩu/GDP khoảng 100% năm 2021."
+			},
+			{
+				id: "f7-5",
+				front: "Ví dụ mặt trái chuỗi cung ứng?",
+				back: "Dệt may và điện tử thiếu nguyên liệu khi chuỗi đứt vì dịch và địa chính trị, nên quản lý nhà nước bị động trong bình ổn sản xuất."
+			}
+		]
+	},
+	{
+		id: 8,
+		title: "Bảy yêu cầu",
+		question: "Quản lý nhà nước về kinh tế gồm những yêu cầu gì? Vì sao phải có các yêu cầu đó?",
+		answer: "Bảy yêu cầu: tầm nhìn chiến lược, quản lý theo pháp luật, nhân tố con người, phát triển hiện đại, độc lập tự chủ gắn hội nhập, quan hệ sản xuất phù hợp lực lượng sản xuất, và quản lý tài chính — tiền tệ để giữ vĩ mô. Có chúng vì thị trường có khuyết tật, lực lượng sản xuất đổi, quyền lực công cần kỷ cương, và thời đại không chờ nước chậm.",
+		frame: [
+			"Mở: quản lý không chỉ là ban hành chính sách; Hàn Quốc, Singapore, Đổi mới Việt Nam nhờ tầm nhìn.",
+			"Liệt kê đủ 7 yêu cầu, mỗi yêu cầu một câu nội dung.",
+			"Vì sao 1: khắc phục khuyết tật thị trường.",
+			"Vì sao 2 và 3: lực lượng sản xuất xã hội hóa cao; quản lý bằng pháp luật.",
+			"Vì sao 4: toàn cầu hóa và cách mạng công nghiệp. Kết: đây là mệnh lệnh thực tiễn, không chỉ lý luận."
+		],
+		sections: [{
+			title: "Bảy yêu cầu",
+			points: [
+				"Một, tầm nhìn và tư duy chiến lược. Xác định đích dài hạn. Nhờ đó, một số nước nghèo sau khoảng ba thập kỷ thành nước phát triển.",
+				"Hai, quản lý theo pháp luật. Quản lý đồng thời là giáo dục, thuyết phục, tổ chức nhân dân tôn trọng và làm theo pháp luật.",
+				"Ba, nhân tố con người. Đào tạo, bồi dưỡng, chăm lo đời sống.",
+				"Bốn, hướng tới phát triển nhanh, toàn diện, hiện đại cuộc cách mạng khoa học — kỹ thuật, có nhân lực chất lượng cao.",
+				"Năm, độc lập, tự chủ về tư duy kinh tế, đồng thời hội nhập sâu và tham gia phân công lao động quốc tế.",
+				"Sáu, xây dựng quan hệ sản xuất mới phù hợp với lực lượng sản xuất mới.",
+				"Bảy, quản lý tài chính, tiền tệ; ổn định vĩ mô; ngăn và hạn chế khủng hoảng kinh tế, tiền tệ, ngân hàng."
+			]
+		}, {
+			title: "Vì sao phải có",
+			points: [
+				"Để khắc phục khuyết tật thị trường: thất bại thị trường, ngoại ứng, bất ổn vĩ mô. Nhà nước can thiệp bằng tài chính — tiền tệ để phân bổ nguồn lực và giữ công bằng. Đây là chỗ đứng của yêu cầu thứ bảy, và cũng cần tầm nhìn để can thiệp đúng việc.",
+				"Để theo kịp lực lượng sản xuất đã xã hội hóa cao. Nhà nước phải điều tiết tăng trưởng và điều chỉnh quan hệ sản xuất cho khớp — yêu cầu thứ sáu.",
+				"Để giữ kỷ cương của quyền lực công. Quản lý nhà nước phải dùng pháp luật làm công cụ chủ yếu, tạo môi trường bình đẳng, minh bạch cho mọi chủ thể.",
+				"Để không tụt khỏi chuỗi giá trị. Thiếu tầm nhìn, thiếu người và thiếu chủ động hội nhập thì cách mạng công nghiệp và toàn cầu hóa loại nền kinh tế chậm ra ngoài."
+			]
+		}],
+		keys: [
+			"Mẹo 7 chữ: Nhìn — Luật — Người — Mới — Mở — Khớp — Tiền.",
+			"Đừng quên yêu cầu thứ sáu. Nhiều bài chỉ nhớ pháp luật và hội nhập.",
+			"Phần “vì sao” phải móc ngược vào yêu cầu, không viết lý do chung chung."
+		],
+		exampleTitle: "Cách móc “vì sao” cho đỡ liệt kê",
+		example: ["Thị trường không tự sửa ngoại ứng và khủng hoảng nên phải có yêu cầu quản lý tiền tệ. Lực lượng sản xuất đổi nhanh nên quan hệ sản xuất phải được điều chỉnh. Quyền lực công mà không theo luật thì môi trường đầu tư không đứng được. Ba thập kỷ của các nền công nghiệp mới cho thấy thiếu tầm nhìn thì các yêu cầu còn lại không có đích."],
+		close: "Bảy yêu cầu là một hệ tiêu chuẩn điều hành. Tuân thủ chúng giúp Nhà nước dùng được ưu thế thị trường, chữa khuyết tật, hội nhập và phát triển bền vững. Đó là mệnh lệnh thực tiễn, không chỉ câu trong giáo trình.",
+		checks: [
+			{
+				id: "c8-1",
+				text: "Đủ 7 yêu cầu, không thiếu quan hệ sản xuất hoặc tài chính — tiền tệ."
+			},
+			{
+				id: "c8-2",
+				text: "Tầm nhìn có ý “khoảng ba thập kỷ” hoặc nước xuất phát thấp."
+			},
+			{
+				id: "c8-3",
+				text: "Quản lý theo pháp luật được nói là giáo dục và thuyết phục, không chỉ cưỡng chế."
+			},
+			{
+				id: "c8-4",
+				text: "Có đủ độc lập tự chủ lẫn hội nhập, không viết một vế."
+			},
+			{
+				id: "c8-5",
+				text: "Phần vì sao có khuyết tật thị trường, lực lượng sản xuất, pháp luật và thời đại."
+			}
+		],
+		cards: [
+			{
+				id: "f8-1",
+				front: "Bảy yêu cầu, nói ngắn?",
+				back: "Tầm nhìn chiến lược. Theo pháp luật. Con người. Phát triển hiện đại. Tự chủ và hội nhập. Quan hệ sản xuất khớp lực lượng sản xuất. Quản lý tài chính — tiền tệ, ổn định vĩ mô."
+			},
+			{
+				id: "f8-2",
+				front: "Mẹo nhớ bảy yêu cầu?",
+				back: "Nhìn — Luật — Người — Mới — Mở — Khớp — Tiền."
+			},
+			{
+				id: "f8-3",
+				front: "Vì sao phải quản lý theo pháp luật?",
+				back: "Quản lý nhà nước là quyền lực công. Pháp luật giữ bình đẳng, minh bạch và môi trường ổn định; đồng thời là quá trình thuyết phục nhân dân làm theo."
+			},
+			{
+				id: "f8-4",
+				front: "Vì sao phải có yêu cầu về tiền tệ?",
+				back: "Thị trường không tự xử thất bại, ngoại ứng và khủng hoảng. Ổn định tài chính — tiền tệ là cách ngăn cú sốc vĩ mô."
+			},
+			{
+				id: "f8-5",
+				front: "Tự chủ và hội nhập có mâu thuẫn không?",
+				back: "Đề yêu cầu cả hai: tư duy độc lập, tự chủ, đồng thời hội nhập sâu và tham gia phân công lao động quốc tế."
+			}
+		]
+	}
+];
+function lessonById(id) {
+	return lessons.find((lesson) => lesson.id === id);
+}
+function allCards() {
+	return lessons.flatMap((lesson) => lesson.cards.map((card) => ({
+		...card,
+		lessonId: lesson.id,
+		lessonTitle: lesson.title
+	})));
+}
+function checkStats(checks, lesson) {
+	return {
+		done: lesson.checks.filter((item) => checks[item.id]).length,
+		total: lesson.checks.length
+	};
+}
+//#endregion
+export { lessonById as a, checkStats as i, ProgressBar as n, lessons as o, allCards as r, AppShell as t };
